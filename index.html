@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Form</title>
+<title>Formulier</title>
 </head>
 <body>
-  <form>
+  <form name="formulier" style="display: block; max-width: 300px;">
+    <fieldset>
+    <legend>Formulier</legend>
     <!-- get the name of the user -->
-    <input name="name" placeholder="name" onchange="validate()" />
+    <input name="name" placeholder="name" oninput="validate()" />
+    <br />
     <!-- get the surname of the user -->
-    <input name="surname" placeholder="surname" />
+    <input name="surname" placeholder="surname" oninput="validate()" />
+    <br />
+    <br />
     <!-- submit the form -->
-    <input type="submit" value="submit the form" onclick="getData()" />
+    <input name="submit"  type="submit" value="submit the form" onclick="getData()" />
+    </fieldset>
   </form>
 <script src="form.js"></script>
 </body>

@@ -1,10 +1,11 @@
 "use strict";
+var formInput = document.forms["formulier"];
 function validate(){
-	document.getElementsByTagName("input")[2].value = 'Hoi';
+	document.getElementsByTagName("fieldset")[0].style.border =
+	"1px solid red";
 }
 function getData(){
-	var formInput = document.getElementsByTagName("input");
 	document.getElementsByTagName("body")[0].innerHTML =
-		 formInput[0].value  + " " +
-		 formInput[1].value; 
+		formInput["name"].value  + " " +
+		formInput["surname"].value; 
 }
